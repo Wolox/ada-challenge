@@ -8,6 +8,9 @@ class Countries extends Component {
     <div className="main-container">
       <h1 className="countries-title">Paises</h1>
       <div className="countries-container">
+        {
+          // Agregar los países aqui
+        }
       </div>
     </div>
     );

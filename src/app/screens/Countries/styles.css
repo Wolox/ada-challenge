@@ -4,6 +4,9 @@
   min-height: 100vh;
   background-color: #F4F4F4;
   padding: 20px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .countries-title {
@@ -36,19 +39,19 @@
   font-size: 15px;
 }
 
-.country-region {
+.country-info-wrapper {
+}
+
+.country-info-region {
   font-weight: 300;
 }
 
-.country-description {
-}
-
-.country-population {
+.country-info-population {
   font-weight: 300;
   position: relative;
 }
 
-.country-population::before {
+.country-info-population::before {
   position: absolute;
   background: url(/static/media/user_icon.ce272632.svg);
   height: 20px;

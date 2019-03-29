@@ -1,0 +1,39 @@
+$black: #1A1A1A;
+$white: #FFF;
+$wolox-blue: #00AFFB;
+$text-size: 18px;
+$line-height: 25px;
+$content: 1200px;
+
+.search-container {
+  background: $white;
+  display: flex;
+  max-width: 1200px;
+  padding: 20px;
+  width: 100%;
+}
+
+.search-input {
+  border: 1px solid $black;
+  border-radius: 3px;
+  font-size: $text-size;
+  height: 40px;
+  line-height: $line-height;
+  margin-right: 20px;
+  padding-left: 10px;
+  width: 100%;
+
+  &::placeholder {
+    font-style: italic;
+  }
+}
+
+.search-button {
+  border: 1px solid $wolox-blue;
+  border-radius: 3px;
+  color: $wolox-blue;
+  font-weight: bold;
+  font-style: italic;
+  height: 40px;
+  width: 100px;
+}

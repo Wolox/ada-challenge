@@ -1,15 +1,23 @@
 $black: #1A1A1A;
 $white: #FFF;
 $wolox-blue: #00AFFB;
+$red: #FF566E;
+
 $text-size: 18px;
 $line-height: 25px;
-$content: 1200px;
+$max-content-size: 1160px;
 
 .search-container {
   background: $white;
   display: flex;
-  max-width: 1200px;
+  max-width: $max-content-size;
   padding: 20px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -21,11 +29,19 @@ $content: 1200px;
   line-height: $line-height;
   margin-right: 20px;
   padding-left: 10px;
-  width: 100%;
 
   &::placeholder {
     font-style: italic;
   }
+
+  &.error {
+    border-color: $red;
+  }
+}
+
+.error-message {
+  color: $red;
+  margin-top: 5px;
 }
 
 .search-button {

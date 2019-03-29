@@ -10,21 +10,25 @@
 }
 
 .countries-title {
+  color: #1A1A1A;
   text-align: center;
-  margin: 0;
+  line-height: 36px;
+  margin: 0 0 20px;
   font-size: 36px;
   font-weight: bold;
 }
 
 .countries-container {
-  max-width: 1200px;
+  max-width: 1160px;
   width: 100%;
 }
 
 .country {
+  background-color: white;
   box-shadow: 2px 2px 4px rgba(203, 203, 203, 0.65);
   margin: 20px;
-  background-color: white;
+  max-width: 250px;
+  width: 100%;
 }
 
 .country-image {
@@ -35,6 +39,7 @@
 }
 
 .country-name {
+  color: #1A1A1A;
   font-weight: bold;
   font-size: 15px;
 }
@@ -43,20 +48,22 @@
 }
 
 .country-info-region {
+  color: #666;
   font-weight: 300;
 }
 
 .country-info-population {
+  color: #666;
   font-weight: 300;
   position: relative;
 }
 
 .country-info-population::before {
   position: absolute;
-  background: url(/static/media/user_icon.ce272632.svg);
-  height: 20px;
+  background: url(../../../assets/user_icon.svg);
+  height: 16px;
   content: '';
-  width: 20px;
-  background-size: 20px;
-  left: -30px;
+  width: 16px;
+  background-size: 16px;
+  right: calc(100% + 5px);
 }

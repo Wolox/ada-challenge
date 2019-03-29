@@ -6,20 +6,30 @@ import './styles.scss';
 const invalidFormat = /[!@#$%^&*(),.?":{}|<>|\d]/g;
 
 class CountryFilterForm extends Component {
+  state = {
+    search: '',
+    error: false
+  };
 
-  isValidCountryFormat = (country) => !invalidFormat.exec(country);
+  isValidCountryFormat = country => !invalidFormat.exec(country);
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
-    const data = new FormData(event.target);
-    this.props.onSubmit(data.search);
+    this.props.onSubmit(this.state.search);
   }
 
   render() {
+    const { error } = this.state;
     return (
-      <form class="search-container" noValidate onSubmit={this.handleSubmit}>
-        <input name="search" class="search-input" type="text" placeholder="Ingrese el nombre del país a buscar" />
-        <button class="search-button" type="submit">Buscar</button>
+      <form className="search-container" onSubmit={this.handleSubmit} noValidate>
+        <div className="form-group">
+          <input name="search" className={`search-input ${error ? 'error' : ''}`} type="text" placeholder="Ingrese el nombre del país a buscar" />
+          {error && (
+            <span className="error-message">
+              Ingresar sólo letras y espacios
+            </span>)}
+        </div>
+        <button className="search-button" type="submit">Buscar</button>
       </form>
     )
   }

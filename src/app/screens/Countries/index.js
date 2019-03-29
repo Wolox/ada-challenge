@@ -5,14 +5,14 @@ import './styles.css';
 class Countries extends Component {
   render() {
     return (
-    <div className="main-container">
+    <main className="main-container">
       <h1 className="countries-title">Paises</h1>
-      <div className="countries-container">
+      <ul className="countries-container">
         {
           // Agregar los países aqui
         }
-      </div>
-    </div>
+      </ul>
+    </main>
     );
   }
 }

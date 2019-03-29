@@ -13,6 +13,8 @@ class CountryFilterForm extends Component {
 
   isValidCountryFormat = country => !invalidFormat.exec(country);
 
+  handleSearchChange = event => this.setState({search: event.target.value});
+
   handleSubmit = event => {
     event.preventDefault();
     this.props.onSubmit(this.state.search);
@@ -23,7 +25,7 @@ class CountryFilterForm extends Component {
     return (
       <form className="search-container" onSubmit={this.handleSubmit} noValidate>
         <div className="form-group">
-          <input name="search" className={`search-input ${error ? 'error' : ''}`} type="text" placeholder="Ingrese el nombre del país a buscar" />
+          <input name="search" onChange={this.handleSearchChange} className={`search-input ${error ? 'error' : ''}`} type="text" placeholder="Ingrese el nombre del país a buscar" />
           {error && (
             <span className="error-message">
               Ingresar sólo letras y espacios

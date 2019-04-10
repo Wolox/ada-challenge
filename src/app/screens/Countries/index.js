@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import './styles.css';
-//import './styles.scss';
+//import './styles.css';
+import './styles.scss';
 
 import countries from '../../constants/countries.js';
 

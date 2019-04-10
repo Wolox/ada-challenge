@@ -25,6 +25,7 @@
 
 .country {
   background-color: #FFF;
+  padding-bottom: 5px;
   box-shadow: 2px 2px 4px rgba(203, 203, 203, 0.65);
   margin: 20px;
   max-width: 250px;
@@ -33,8 +34,8 @@
 
 .country-flag {
   height: 180px;
-  max-width: 100%;
-  width: 210px;
+  max-width: 250px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -42,6 +43,7 @@
   color: #1A1A1A;
   font-weight: bold;
   font-size: 15px;
+  margin: 3px;
 }
 
 .country-info-wrapper {
@@ -49,17 +51,21 @@
   flex-wrap: wrap;
   display: -webkit-flex; /* Safari */
   -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+
+  justify-content: space-between;
 }
 
 .country-info-region {
   color: #666;
   font-weight: 300;
+  margin: 3px;
 }
 
 .country-info-population {
   color: #666;
   font-weight: 300;
   position: relative;
+  margin: 3px;
 }
 
 .country-info-population::before {
@@ -70,4 +76,5 @@
   width: 16px;
   background-size: 16px;
   right: calc(100% + 5px);
+  margin: 3px;
 }

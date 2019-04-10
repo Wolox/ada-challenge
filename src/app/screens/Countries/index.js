@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './styles.css';
+//import './styles.scss';
 
 import countries from '../../constants/countries.js';
 
@@ -29,7 +30,8 @@ class Countries extends Component {
             <p className="country-info-region">{pais.region}</p> 
             <p className="country-info-population">{pais.population}</p>
           </div>
-        </div>);
+        </div>
+      );
     });
 
     return (
@@ -38,7 +40,7 @@ class Countries extends Component {
         <ul className="countries-container">
           {
             // Agregar los países aqui
-            <li>{paises}</li>              
+            <li className="country-info-wrapper">{paises}</li>             
             
           }
         </ul>

@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 
 import './styles.css';
 
+import argentina from '../../constants/argentina';
+
 class Country extends Component {
   render() {
     return (
+
     <div className="main-container">
       <h1 className="country-title">Nombre del pais desde constante o api</h1>
       <div className="country-container">

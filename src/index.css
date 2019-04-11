@@ -16,3 +16,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Reestribir los estilos del equalizer */
+body li {
+  list-style-type: disc;
+}

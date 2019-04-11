@@ -1,69 +1,66 @@
 .main-container {
   border-top: 5px solid #01ADEE;
-  align-items: center;
   min-height: 100vh;
   background-color: #F4F4F4;
-  padding: 20px 10px 10px;
+  padding: 20px 100px 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.countries-title {
+.country-title {
   color: #1A1A1A;
-  text-align: center;
   line-height: 36px;
-  margin: 0 0 20px;
+  margin: 0 30px 20px;
+  position: relative;
   font-size: 36px;
   font-weight: bold;
 }
 
-.countries-container {
-  max-width: 1160px;
-  width: 100%;
+.country-title::before {
+  position: absolute;
+  background: url(../../../assets/argentina_flag.svg);
+  height: 20px;
+  content: '';
+  width: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  right: calc(100% + 10px);
+  top: 8px;
 }
 
-.country {
-  background-color: white;
-  box-shadow: 2px 2px 4px rgba(203, 203, 203, 0.65);
-  margin: 20px;
-  max-width: 250px;
+.country-container {
+  max-width: 1160px;
+  width: 100%;
+  display: flex;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 460px;
   width: 100%;
 }
 
 .country-image {
-  height: 180px;
-  max-width: 100%;
-  width: 210px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+  margin: 0 20px 20px 0;
 }
 
-.country-name {
-  color: #1A1A1A;
+.country-info {
+  background: white;
+  padding: 30px;
+  width: 100%;
+}
+
+.country-info-label {
   font-weight: bold;
-  font-size: 15px;
+  color: #1A1A1A;
+  font-size: 20px;
 }
 
-.country-info-wrapper {
-}
-
-.country-info-region {
-  color: #666;
-  font-weight: 300;
-}
-
-.country-info-population {
-  color: #666;
-  font-weight: 300;
-  position: relative;
-}
-
-.country-info-population::before {
-  position: absolute;
-  background: url(../../../assets/user_icon.svg);
-  height: 16px;
-  content: '';
-  width: 16px;
-  background-size: 16px;
-  right: calc(100% + 5px);
+.country-info-text {
+  color: #1A1A1A;
+  font-size: 20px;
 }

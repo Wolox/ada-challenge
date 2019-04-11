@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import Countries from './app/screens/Countries';
+import Country from './app/screens/Country';
 
 class App extends Component {
   render() {
-    return (<Countries />);
+    return (<Country />);
   }
 }
 

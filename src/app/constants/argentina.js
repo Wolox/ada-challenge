@@ -1,5 +1,6 @@
 export default {
    country_name: "Argentina",
+   capital_city: "Buenos Aires",
    national_language: "Español",
    currency: "Pesos",
    population: "43,847,430",

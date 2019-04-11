@@ -1,0 +1,66 @@
+.main-container {
+    border-top: 5px solid #01ADEE;
+    min-height: 100vh;
+    background-color: #F4F4F4;
+    padding: 20px 100px 10px;
+    display: flex;
+    flex-direction: column;
+      
+  .country-title {
+    color: #1A1A1A;
+    line-height: 36px;
+    margin: 0 30px 20px;
+    position: relative;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .country-title::before {
+    position: absolute;
+    background: url(../../../assets/argentina_flag.svg);
+    height: 20px;
+    content: '';
+    width: 30px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    right: calc(100% + 10px);
+    top: 8px;
+  }
+    
+  .country-container {
+    max-width: 1160px;
+    width: 100%;
+    display: flex;
+  }
+
+}
+
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 460px;
+    width: 100%;
+  }
+  
+  .country-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 20px 20px 0;
+  }
+  
+  .country-info {
+    background: white;
+    padding: 30px;
+    width: 100%;
+  }
+  
+  .country-info-label {
+    font-weight: bold;
+    color: #1A1A1A;
+    font-size: 20px;
+  }
+  
+  .country-info-text {
+    color: #1A1A1A;
+    font-size: 20px;
+  }

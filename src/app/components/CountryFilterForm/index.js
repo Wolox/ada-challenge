@@ -17,11 +17,25 @@ class CountryFilterForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.onSubmit(this.state.search);
+
+    this.setState({
+      error: false
+    })
+
+    if(this.isValidCountryFormat(this.state.search)){
+      this.props.onSubmit(this.state.search);  
+    }else{
+      this.setState({
+        error:true
+      })
+    }
+    
   }
 
   render() {
     const { error } = this.state;
+    //es lo mismo que
+    // const error =  this.state.error;
     return (
       <form className="search-container" onSubmit={this.handleSubmit} noValidate>
         <div className="form-group">

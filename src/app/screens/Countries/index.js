@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import './styles.scss';
 
 import countries from '../../constants/countries.js';
+import CountryFilterForm from '../../components/CountryFilterForm';
 
 class Countries extends Component {
 
@@ -11,9 +12,18 @@ class Countries extends Component {
     super(props);
 
     this.state = {
-      //paises:[]
       countries: countries
+
     }
+  }
+
+  filtrarPaises = (palabraBusqueda) => {
+    console.log('filtramos', palabraBusqueda);
+    const paisesFiltrados = countries.filter(pais => pais.name.toLowerCase().includes(palabraBusqueda.toLowerCase()));
+
+    this.setState({
+      countries: paisesFiltrados
+    })
 
   }
 
@@ -37,9 +47,11 @@ class Countries extends Component {
     return (
       <main className="main-container">
         <h1 className="countries-title">Paises</h1>
+        <CountryFilterForm onSubmit={this.filtrarPaises}/>
         <ul className="countries-container">
           {
             // Agregar los países aqui
+            //countries.map(p => <li> {p.name}</li>)
             <li className="country-info-wrapper">{paises}</li>             
             
           }

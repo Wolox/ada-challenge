@@ -43,11 +43,11 @@ class Country extends Component {
         {images}
         </div>
         <ul className="country-info">
-          <li><span className ="country-info-label">Capital:</span> {this.state.countryCapital}</li>
-          <li><span className ="country-info-label">National Language:</span> {this.state.countryLanguage}</li>
-          <li><span className ="country-info-label">Currency:</span> {this.state.countryCurrency}</li>
-          <li><span className ="country-info-label">Population:</span> {this.state.countryPopulation}</li>
-          <li><span className ="country-info-label">Time Zone:</span> {this.state.countryTimeZone}</li>
+          <li><span className ="country-info-label">Capital:</span><span className= "country-info-text">{this.state.countryCapital}</span></li>
+          <li><span className ="country-info-label">National Language:</span><span className= "country-info-text">{this.state.countryLanguage}</span></li>
+          <li><span className ="country-info-label">Currency:</span><span className= "country-info-text">{this.state.countryCurrency}</span></li>
+          <li><span className ="country-info-label">Population:</span><span className= "country-info-text">{this.state.countryPopulation}</span></li>
+          <li><span className ="country-info-label">Time Zone:</span><span className= "country-info-text">{this.state.countryTimeZone}</span></li>
         </ul>
       </div>
     </div>

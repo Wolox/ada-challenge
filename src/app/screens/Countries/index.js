@@ -33,14 +33,14 @@ class Countries extends Component {
     const paises = this.state.countries.map(function(pais){
 
       return (
-        <div className="country">
+        <figure className="country">
           <img src={pais.flag} className="country-flag" alt="bandera"/>
           <h5 className="country-name">{pais.name}</h5> 
-          <div className="country-info-wrapper">
+          <figcaption className="country-info-wrapper">
             <p className="country-info-region">{pais.region}</p> 
             <p className="country-info-population">{pais.population}</p>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       );
     });
 
